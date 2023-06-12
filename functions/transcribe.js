@@ -6,9 +6,9 @@ exports.handler = function(context, event, callback) {
     if (!event.request.cookies.convo) {
         // Greet the user with a message using AWS Polly Neural voice
         twiml.say({
-                voice: 'Polly.Olivia-Neural',
+                voice: 'Polly.Amy-Neural',
             },
-            "Hey there! I'm Grace, your friendly companion. We can talk, play a game, or explore other ways I can help you. What is your name?"
+            "Hey there! I'm Anna, your friendly companion. We can talk, play a game, or explore other ways I can help you. This service is available only to Romanian residents at the moment, may I know your name please so that I can address you better?"
         );
     }
 
@@ -22,7 +22,7 @@ exports.handler = function(context, event, callback) {
     });
 
     twiml.say({
-    voice: "Polly.Olivia-Neural",
+    voice: "Polly.Amy-Neural",
     },"Are you still there?");
 
     twiml.pause({ length: 5 });

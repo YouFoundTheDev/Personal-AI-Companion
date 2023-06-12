@@ -29,7 +29,7 @@ exports.handler = async function(context, event, callback) {
     
     // Generate some <Say> TwiML using the cleaned up AI response
     twiml.say({
-            voice: "Polly.Olivia-Neural",
+            voice: "Polly.Amy-Neural",
         },
         "Okay"
     );

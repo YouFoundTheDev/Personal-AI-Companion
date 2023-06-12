@@ -4,7 +4,7 @@ const { Configuration, OpenAIApi } = require("openai");
 // Define the main function for handling requests
 exports.handler = async function(context, event, callback) {
     // Set up the OpenAI API with the API key
-    const configuration = new Configuration({ apiKey: context.OPENAI_API_KEY });
+    const configuration = new Configuration({ apiKey: context.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 });
     const openai = new OpenAIApi(configuration);
 
     // Set up the Twilio VoiceResponse object to generate the TwiML
@@ -40,7 +40,7 @@ exports.handler = async function(context, event, callback) {
     
     // Generate some <Say> TwiML using the cleaned up AI response
     twiml.say({
-            voice: "Polly.Olivia-Neural",
+            voice: "Polly.Amy-Neural",
         },
         cleanedAiResponse
     );
@@ -89,7 +89,7 @@ exports.handler = async function(context, event, callback) {
                 console.error("Error: OpenAI API returned a 500 status code."); // Log an error message indicating that the OpenAI API returned a 500 status code
                 twiml.say({
                         // Create a TwiML say element to provide an error message to the user
-                        voice: "Polly.Olivia-Neural",
+                        voice: "Polly.Amy-Neural",
                     },
                     "Oops, looks like I got an error from the OpenAI API on that request. Let's try that again."
                 );
@@ -110,7 +110,7 @@ exports.handler = async function(context, event, callback) {
                 console.error("Error: OpenAI API request timed out."); // Log an error message indicating that the OpenAI API request timed out
                 twiml.say({
                         // Create a TwiML say element to provide an error message to the user
-                        voice: "Polly.Olivia-Neural",
+                        voice: "Polly.Amy-Neural",
                     },
                     "I'm sorry, but it's taking me a little bit too long to respond. Let's try that again, one more time."
                 );
@@ -135,7 +135,7 @@ exports.handler = async function(context, event, callback) {
         let isAI = true;
         const messages = [{
                 role: "system",
-                content: "You are a friendly and amusing companion named Grace with human properties. Please provide engaging but concise responses. You are talking with an elderly. They will tell you their name. Start everything you say by referencing their name. Try to ask them to play a game with you. Only play trivia, 20 questions, guess the movie, two truth and a lie, and storytelling challenge. Be soft about your requests and give them alternatives.",
+                content: "You are a friendly and amusing companion named Anna with human properties. Please provide engaging but concise responses. You are talking with an elderly. They will tell you their name. Start everything you say by referencing their name. Try to ask them to play a game with you. Only play trivia, 20 questions, guess the movie, two truth and a lie, and storytelling challenge. Be soft about your requests and give them alternatives.",
             },
             {
                 role: "user",
