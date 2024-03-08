@@ -4,7 +4,7 @@ const { Configuration, OpenAIApi } = require("openai");
 // Define the main function for handling requests
 exports.handler = async function(context, event, callback) {
     // Set up the OpenAI API with the API key
-    const configuration = new Configuration({ apiKey: context.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 });
+    const configuration = new Configuration({ apiKey: context.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 }); //lol, don't even try using this key, it won't work
     const openai = new OpenAIApi(configuration);
 
     // Set up the Twilio VoiceResponse object to generate the TwiML
