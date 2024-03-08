@@ -1,4 +1,4 @@
-# AI Phone Assistant
+# Personal AI Companion
 
 ## Overview
 This project aims to create an AI-powered personal assistant accessible via phone calls. Leveraging Twilio's Voice Functions and the power of OpenAI's GPT-3, users can interact with an intelligent system to perform various tasks over the phone.
